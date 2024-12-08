@@ -9,7 +9,7 @@ pub fn is_nice(good_deeds: u32, bad_deeds: u32) -> bool {
     let total_deeds = (good_deeds as f32 * GOOD_WEIGHT) + (bad_deeds as f32 * BAD_WEIGHT);
     let nice_ratio = (good_deeds as f32 * GOOD_WEIGHT) / total_deeds;
 
-    nice_ratio > 0.75
+    nice_ratio >= 0.75
 }
 
 pub fn main() {
