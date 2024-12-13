@@ -20,7 +20,7 @@ pub fn find_nearest_location(locations: &[Location]) -> Result<&Location, Box<dy
                 .partial_cmp(&b.x.hypot(b.y))
                 .unwrap_or(Ordering::Equal)
         })
-        .ok_or_else(|| "No locations found".into()) // Use `ok_or_else` for better ergonomics
+        .ok_or_else(|| "No locations found".into())
 }
 
 const SNOWBALL_WEIGHT_KG: f64 = 0.2;
